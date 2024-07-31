@@ -11,7 +11,7 @@ body, html {
 nav ul {
     list-style: none;
     padding: 10px 20px;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.9); /* Slightly darker for better contrast */
     display: flex;
     justify-content: center;
     position: fixed;
@@ -64,10 +64,9 @@ nav ul li a:hover {
     text-align: center;
     scroll-snap-align: start;
     color: white;
-    flex-direction: column; /* Ensure vertical alignment */
 }
 
-.bg1, .bg2, .bg3, .bg4, .bg5 {
+.bg6, .bg7, .bg8 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,16 +83,32 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.content img {
-    max-width: 100%;
-    height: auto;
+.collage-container, .paragraph-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.photo {
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center;
     border-radius: 10px;
-    margin-top: 20px; /* Spacing between text and images */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
-.content img:hover {
+.photo:hover {
     transform: scale(1.05);
 }
 
