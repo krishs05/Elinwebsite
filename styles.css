@@ -1,0 +1,85 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.layer {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+.bg1 {
+    background-image: url('Elin.png');
+    background-color: black;
+}
+
+.bg2 {
+    background-image: url('Elin_1.png');
+    background-color: blue;
+}
+
+.bg3 {
+    background-image: url('bg3.jpg');
+    background-color: pink;
+}
+
+.bg4 {
+    background-image: url('bg4.jpg');
+    background-color: purple;
+}
+
+.bg5 {
+    background-image: url('bg5.jpg');
+    background-color: orange;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+h1, h2 {
+    margin: 0;
+    font-weight: normal;
+    text-shadow: 2px 2px 5px black;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px black;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
