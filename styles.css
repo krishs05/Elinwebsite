@@ -7,6 +7,28 @@ body, html {
     scroll-behavior: smooth;
 }
 
+nav ul {
+    list-style: none;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
 .parallax {
     perspective: 1px;
     height: 100vh;
@@ -27,29 +49,17 @@ body, html {
     scroll-snap-align: start;
 }
 
-.bg1 {
-    background-image: url('Elin.png');
+.bg6 {
+    background-image: url('bg6.jpg');
     background-color: black;
 }
 
-.bg2 {
-    background-image: url('Elin_1.png');
-    background-color: blue;
+.bg7 {
+    background-color: black;
 }
 
-.bg3 {
-    background-image: url('bg3.jpg');
-    background-color: pink;
-}
-
-.bg4 {
-    background-image: url('bg4.jpg');
-    background-color: purple;
-}
-
-.bg5 {
-    background-image: url('bg5.jpg');
-    background-color: orange;
+.bg8 {
+    background-color: #2c3e50;
 }
 
 .content {
@@ -57,6 +67,30 @@ body, html {
     z-index: 1;
     padding: 20px;
     animation: fadeIn 3s ease-in-out;
+}
+
+.collage-container, .paragraph-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.photo {
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 h1, h2 {
@@ -71,12 +105,15 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 p {
     font-size: 1.5rem;
     margin-top: 10px;
     text-shadow: 1px 1px 3px black;
+    max-width: 800px;
+    margin: auto;
 }
 
 @keyframes fadeIn {
